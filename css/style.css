@@ -15,7 +15,7 @@ html, body {
 
 body {
   line-height:1;
-  color: #FCFDF9;
+  color:#fff;  /*#FCFDF9;*/
   font: 16px/1.7 Arial, sans-serif;
 
   min-width:800px;
