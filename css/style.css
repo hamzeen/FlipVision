@@ -238,6 +238,7 @@ li {
     /*box-shadow: 1px 1px 1px 1px rgba(25, 50, 20, 0.5);*/
     box-shadow: 1px 0px 1px 0px rgba(125, 150, 120, 0.1);
     -webkit-font-smoothing: antialiased;
+    cursor: pointer;
 }li:nth-child(odd) {}li:nth-child(even) {}
 li:hover {
   color: rgba(255,250,250,.85); /*#DF9FBA/* | #CF9FB0 | #EFEFFE | #7dcc43*/
