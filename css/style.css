@@ -68,6 +68,7 @@ ol,ul {
     opacity: 1 !important;
     padding-top: 100px;
     text-transform: uppercase;
+    color: #FFFFFF;
 }
 .onload .preload {
     display: none;
