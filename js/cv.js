@@ -9,13 +9,27 @@ var scaleRatio = 0;
 var frmCount = 0;
 
     // request webcam access
-    navigator.webkitGetUserMedia({ video: true },
+    /*navigator.webkitGetUserMedia({ video: true },
         function(stream) {
             video.src = window.webkitURL.createObjectURL(stream);
             webcamReady();
         },
         function(e) { alert('Webcam error!', e); }
-    );
+    );*/
+
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+	console.log('browser does not support video capture');
+
+    } else { // Request the camera.
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then((stream) => {
+            video.srcObject = stream;
+            video.play();
+            video.onplay = function() {
+                webcamReady();
+            };
+        });
+    }
 
     // on webcam ready
     function webcamReady() {
